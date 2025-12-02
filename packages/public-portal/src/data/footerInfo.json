@@ -1,0 +1,28 @@
+{
+  "he": {
+    "links": [
+      { "label": "אודות", "href": "/about" },
+      { "label": "צור קשר", "href": "/contact" },
+      { "label": "שאלות נפוצות", "href": "/faq" }
+    ],
+    "contactInfo": {
+      "name": "חב\"ד תפן",
+      "email": "info@example.org",
+      "phone": "03-1234567",
+      "address": "תל אביב, ישראל"
+    }
+  },
+  "en": {
+    "links": [
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "FAQ", "href": "/faq" }
+    ],
+    "contactInfo": {
+      "name": "Chabad Tefen",
+      "email": "info@example.org",
+      "phone": "03-1234567",
+      "address": "Tel Aviv, Israel"
+    }
+  }
+}

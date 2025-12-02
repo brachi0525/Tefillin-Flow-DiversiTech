@@ -1,0 +1,25 @@
+{
+  "name": "etl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "googleapis": "^152.0.0",
+    "qrcode": "^1.5.4",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.15.18",
+    "@types/qrcode": "^1.5.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

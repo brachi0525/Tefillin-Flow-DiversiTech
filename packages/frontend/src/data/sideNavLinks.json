@@ -1,0 +1,70 @@
+[
+    {
+        "to": "/",
+        "label": "בית",
+        "icon": "home",
+        "allowedRoles": [
+            "administrator",
+            "manager",
+            "location_rabbi",
+            "system_admin",
+            "inventory_manager"
+        ]
+    },
+      {
+        "to": "/users",
+        "label": "משתמשים",
+        "icon": "users",
+        "allowedRoles": [
+            "administrator",
+            "manager",
+            "location_rabbi",
+            "system_admin",
+            "inventory_manager"
+            
+        ]
+    },
+    {
+        "to": "/managerDashboard",
+        "label": "חיילים",
+        "icon": "people",
+        "allowedRoles": [
+            "administrator",
+            "manager",
+            "location_rabbi",
+            "system_admin"
+        ]
+    },
+    {
+        "to": "/locations",
+        "label": "מיקומים",
+        "icon": "locations",
+        "allowedRoles": [
+            "administrator",
+            "manager",
+            "location_rabbi",
+            "inventory_manager",
+            "system_admin"
+        ]
+    },
+    {
+        "to": "/tefillinDashboard",
+        "label": "תפילין",
+        "icon": "tefillin",
+        "allowedRoles": [
+            "administrator",
+            "manager",
+            "inventory_manager",
+            "location_rabbi"
+        ]
+    },
+    {
+        "to": "/settings",
+        "label": "הגדרות",
+        "icon": "settings",
+        "allowedRoles": [
+            "system_admin",
+            "administrator"
+        ]
+    }
+]

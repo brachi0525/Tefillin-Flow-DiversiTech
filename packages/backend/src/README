@@ -1,0 +1,29 @@
+## 📘 API Documentation Structure
+
+This API is versioned under `/api/v1/`, and includes the following main endpoints:
+
+### 🔐 Authentication
+
+All protected routes require a valid `Authorization` header with a bearer token.
+---
+
+### 👤 Users
+
+| Method | Endpoint             | Description           |
+|--------|----------------------|-----------------------|
+| GET    | /api/v1/users        | Get all users         |
+| POST   | /api/v1/users        | Create a new user     |
+| PUT    | /api/v1/users/:id    | Update user by ID     |
+| DELETE | /api/v1/users/:id    | Delete user by ID     |
+
+---
+
+### 🪖 Soldiers
+
+| Method | Endpoint               | Description             |
+|--------|------------------------|-------------------------|
+| GET    | /api/v1/soldiers       | Get all soldiers        |
+| POST   | /api/v1/soldiers       | Create a new soldier    |
+| PUT    | /api/v1/soldiers/:id   | Update soldier by ID    |
+| DELETE | /api/v1/soldiers/:id   | Delete soldier by ID    |
+

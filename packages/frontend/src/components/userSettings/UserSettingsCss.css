@@ -1,0 +1,37 @@
+.user-settings {
+    position: fixed; /* או absolute אם זה מתאים יותר */
+    top: 0;
+    right: 0;
+    width: 20%; /* חצי מהמסך */
+    height: 100%; /* גובה מלא */
+    background-color: white; /* צבע רקע, תוכל לשנות לפי הצורך */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* צל בצד שמאל */
+    z-index: 9999; /* ודא שזה גבוה יותר מכל דבר אחר */
+    overflow-y: auto; 
+}.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.7); /* צבע אפור בהיר עם שקיפות */
+    z-index: 9998; /* ודא שזה מתחת לקומפוננטה */
+}
+
+.user-settings {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%; /* חצי מהמסך */
+    height: 100%; /* גובה מלא */
+    background-color: white; /* צבע רקע */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* צל בצד שמאל */
+    z-index: 9999; /* ודא שזה גבוה יותר מכל דבר אחר */
+    overflow-y: auto; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

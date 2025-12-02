@@ -1,0 +1,227 @@
+{
+  "items": [
+    {
+      "id": "2",
+      "title": "חבד תפן",
+      "description": "סרטון מהשטח",
+      "url": "https://drive.google.com/thumbnail?id=1Ru-DuCCgJu8N8thaeAo6ILHI8ORTBhdS",
+      "type": "image",
+      "order": 3,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2025-07-28T07:23:17.038Z",
+      "location": "gallery"
+    },
+    {
+      "id": "3",
+      "title": "לוחמי חטיבת גבעת",
+      "description": "לחברים היקרים שתורמים באהבה – קיבלנו תפילין, אבל קיבלנו הרבה יותר מזה. קיבלנו תחושת שייכות, רוח, וחיבוק חם מהעורף לחזית. ברגעים הכי עמוקים, אנחנו שמים תפילין וזוכרים – לא נלחמים לבד. תודה שאתם איתנו. תודה שאתם חלק מהכוח שלנו.",
+      "url": "https://drive.google.com/thumbnail?id=1kFaPVL1KRKd2ITAv5oqG78CqLtz96XfK",
+      "type": "image",
+      "order": 4,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "4",
+      "title": "חיילי פלוגת עוז",
+      "description": "תודה על התרומה שמלווה אותנו כל יום מחדש – עם תפילין, עם משמעות, ועם תחושת שליחות.",
+      "url": "https://drive.google.com/thumbnail?id=1bCjRdYafwSg9nQl_6aKfD-D9in4otC3h",
+      "type": "image",
+      "order": 5,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "5",
+      "title": "כוח מגן הדרום",
+      "description": "בתוך זחל״ם מאובק, עם תפילין שקיבלנו מכם – קיבלנו גם חיזוק, גם אמונה וגם מטרה.",
+      "url": "https://drive.google.com/thumbnail?id=1od5xJ-dQQWhmPvi_h2x2GHK4zXAEEbNJ",
+      "type": "image",
+      "order": 6,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "6",
+      "title": "לוחמי חטיבת איתן",
+      "description": "תפילין שקיבלנו מכם הם לא רק מצווה – הם גם סמל לעורף שמחבק אותנו בלב החזית.",
+      "url": "https://drive.google.com/thumbnail?id=1Vw28I32uiPnTF2WItRYLEpJowppOygXr",
+      "type": "image",
+      "order": 7,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "7",
+      "title": "לוחמי יחידת גבורה",
+      "description": "קיבלנו תפילין, אבל יחד איתם我们也 קיבלנו גם אמונה, גאווה – ותחושת שליחות מחודשת. תודה שאתם איתנו.",
+      "url": "https://drive.google.com/thumbnail?id=1a2Nh2NHuxyolFVFlszKJJTYpWZVtIAlS",
+      "type": "image",
+      "order": 8,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "8",
+      "title": "כוח נחשון",
+      "description": "בין רגעי ההמתנה לשטח – התפילין שהענקתם נתנו לנו כוח שקט, פנימי, שמאיר את הלב גם בלי מילים. תודה עמוקה.",
+      "url": "https://drive.google.com/thumbnail?id=1O8cGzR-nD5Kh4R4nUozA8bsPpSHFO-IQ",
+      "type": "image",
+      "order": 9,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "9",
+      "title": "יואב בורשטיין",
+      "description": "בין נשק לתפילין – הרגשתי את החיבוק שלכם. תודה על המתנה, תודה על התמיכה, תודה שאתם חלק מהלב.",
+      "url": "https://drive.google.com/thumbnail?id=1YnGrYNYI2IsFPx5WMsxTT1dJ2Q0wYsOb",
+      "type": "image",
+      "order": 10,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "10",
+      "title": "לוחמי פלוגת הכתף",
+      "description": "החייל האלף שקיבל תפילין – הוא לא רק מספר. הוא סמל לאלף לבבות שקיבלו חיזוק. תודה שאתם חלק מהמסע.",
+      "url": "https://drive.google.com/file/d/1yrpM8zhR810SWkEeeex6GJrvUk63FdZ3/preview",
+      "type": "video",
+      "embed": true,
+      "order": 11,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    },
+    {
+      "id": "11",
+      "title": "צוות \"עוז ותודה\"",
+      "description": "בסרטון הזה – מילות תודה של לוחמים אמיתיים. תפילין שהגיעו בזמן, חיזקו את הרוח, והשאירו חותם בלב.",
+      "url": "https://drive.google.com/file/d/1dfNDUzUgICmdnTSZBnsCFJFcDm3Ujwkt/preview",
+      "type": "video",
+      "embed": true,
+      "order": 12,
+      "isActive": true,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "location": "gallery"
+    }
+    ,
+    {
+      "id": "1753703050258",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1sF_BkepqyvDOfOYW2ymB4uVT3aRlzuJ-&sz=w1000",
+      "type": "image",
+      "order": 12,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:44:10.258Z",
+      "updatedAt": "2025-07-28T11:44:10.258Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703098441",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=13rH3ODNc0SQnpPUfPAwurDl6wW2irvc9&sz=w1000",
+      "type": "image",
+      "order": 13,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:44:58.441Z",
+      "updatedAt": "2025-07-28T11:44:58.441Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703191566",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1-aLnsNZnAKfaePou0F7jqcIMnZ55phz5&sz=w1000",
+      "type": "image",
+      "order": 14,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:46:31.566Z",
+      "updatedAt": "2025-07-28T11:46:31.566Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703223366",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1FBD9_N_4lamBiYRIkKbO7rVAV32vgI1z&sz=w1000",
+      "type": "image",
+      "order": 15,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:47:03.366Z",
+      "updatedAt": "2025-07-28T11:47:03.366Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703283478",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1MRv8lb6UP5RwNV5YWhjnhggXWMCQW0MR&sz=w1000",
+      "type": "image",
+      "order": 16,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:48:03.478Z",
+      "updatedAt": "2025-07-28T11:48:03.478Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703305096",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1wafV_mjYmF-AWZSciqPS6gttNdbjvthq&sz=w1000",
+      "type": "image",
+      "order": 17,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:48:25.096Z",
+      "updatedAt": "2025-07-28T11:48:25.096Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703325454",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1VX_KyEohsJfa9L-obswRiOVlXiJPpoiP&sz=w1000",
+      "type": "image",
+      "order": 18,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:48:45.454Z",
+      "updatedAt": "2025-07-28T11:48:45.454Z",
+      "location": "about"
+    },
+    {
+      "id": "1753703346390",
+      "title": "כותרת חדשה",
+      "description": "",
+      "url": "https://drive.google.com/thumbnail?id=1hUBTrSTKra9R5iykkh0fZgzTbctBFdoW&sz=w1000",
+      "type": "image",
+      "order": 19,
+      "isActive": true,
+      "createdAt": "2025-07-28T11:49:06.390Z",
+      "updatedAt": "2025-07-28T11:49:06.390Z",
+      "location": "about"
+    }
+  ],
+  "settings": {
+    "lastUpdated": "2024-01-16T14:20:00Z",
+    "version": "1.0.0"
+  }
+}

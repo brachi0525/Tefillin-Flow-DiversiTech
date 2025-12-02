@@ -1,0 +1,97 @@
+/* RTL Support */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Flex Direction Support */
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.ltr .flex-row {
+  flex-direction: row;
+}
+
+/* Grid Support for RTL */
+.rtl .grid-cols-2 > *:first-child {
+  order: 2;
+}
+
+.rtl .grid-cols-2 > *:last-child {
+  order: 1;
+}
+
+/* Margin and Padding Utilities */
+.rtl .ml-auto {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+.rtl .mr-auto {
+  margin-right: unset;
+  margin-left: auto;
+}
+
+/* Text Alignment */
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}
+
+.ltr .text-left {
+  text-align: left;
+}
+
+.ltr .text-right {
+  text-align: right;
+}
+
+/* Animation Direction */
+.rtl .animate-bounce {
+  animation-direction: reverse;
+}
+
+/* Transform Direction */
+.rtl .transform.scale-x-0 {
+  transform-origin: left;
+}
+
+.ltr .transform.scale-x-0 {
+  transform-origin: right;
+}
+
+/* Responsive Grid Order */
+@media (min-width: 1024px) {
+  .rtl .lg\:order-1 {
+    order: 2;
+  }
+  
+  .rtl .lg\:order-2 {
+    order: 1;
+  }
+}
+
+.rtl .origin-right {
+  transform-origin: left;
+}
+
+.ltr .origin-right {
+  transform-origin: right;
+}
+
+.rtl .origin-left {
+  transform-origin: right;
+}
+
+.ltr .origin-left {
+  transform-origin: left;
+}

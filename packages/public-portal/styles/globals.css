@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Heebo:wght@400;700&display=swap');
+
+@tailwind utilities;
+@import "tailwindcss";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+
+@theme {
+   --background: #ffffff;
+  --foreground: #171717;
+
+  /* Tailwind theme variables */
+  --color-lemon: #0066CC;
+  --color-primary: #0066CC;
+  --color-primary-light: #60A5FA;
+  --color-primary-dark: #1E3A8A;
+  --color-secondary: #FFD700;
+  --color-secondary-light: #FCD34D;
+  --color-secondary-dark: #B45309;
+  --color-background: #FFFFFF;
+  --color-text: #111827;
+  --font-family-he: Heebo, Assistant, sans-serif;
+  --font-family-en: Inter, "Open Sans", sans-serif;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-tablet: 900px;
+  --breakpoint-desktop: 1200px;
+
+  /* Animation durations */
+  --animation-fadeIn: 0.5s;
+  --animation-fadeInSlow: 1s;
+  --animation-fadeInFast: 0.3s;
+  --animation-slideUp: 0.5s;
+  --animation-slideUpSlow: 0.8s;
+  --animation-slideUpFast: 0.3s;
+  --animation-slideDown: 0.5s;
+  --animation-slideLeft: 0.5s;
+  --animation-slideRight: 0.5s;
+  --animation-bounce: 1s;
+  --animation-pulse: 2s;
+  --animation-spin: 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0; 
+    transform: translateY(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes slideRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(-20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+

@@ -1,0 +1,22 @@
+
+    {
+      "he": [
+        { "label": "דף הבית", "href": "/" },
+        { "label": "הרשמה", "href": "/register" },
+        { "label": "תרומה", "href": "/donate" },
+        { "label": "אודות", "href": "/about" },
+        { "label": "גלריה", "href": "/gallery" }
+
+      ],
+      "en": [
+        { "label": "Home", "href": "/" },
+        { "label": "Register", "href": "/register" },
+        { "label": "Donate", "href": "/donate" },
+        { "label": "About", "href": "/about" },
+       { "label": "Gallery", "href": "/gallery" }
+
+      ]
+    }
+
+
+

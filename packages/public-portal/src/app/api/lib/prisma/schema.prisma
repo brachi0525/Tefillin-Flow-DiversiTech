@@ -1,0 +1,208 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+model addresses {
+  id           Int         @id @default(autoincrement())
+  country      String?     @db.VarChar(255)
+  city         String?     @db.VarChar(255)
+  street       String?     @db.VarChar(255)
+  house_number String?     @db.VarChar(50)
+  locations    locations[]
+}
+model locations {
+  id                                 String                 @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name                               String                 @db.VarChar
+  phone                              String                 @db.VarChar
+  created_at                         DateTime?              @default(now()) @db.Timestamp(6)
+  rabbi_id                           String?                @db.Uuid
+  updatedat                          DateTime?              @default(now()) @db.Timestamp(6)
+  calendarid                         String?                @db.VarChar(255)
+  isactive                           Boolean?               @default(true)
+  address_id                         Int?
+  distributions_photos               distributions_photos[]
+  users                              users?                 @relation(fields: [rabbi_id], references: [id], onUpdate: NoAction, map: "fk_locations_rabbi")
+  addresses                          addresses?             @relation(fields: [address_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  soldiers                           soldiers[]
+  tefillin                           tefillin[]
+  users_users_location_idTolocations users[]                @relation("users_location_idTolocations")
+  @@index([name], map: "idx_locations_name")
+  @@index([rabbi_id], map: "idx_locations_rabbi_id")
+}
+model soldier_status_history {
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  soldier_id      String?   @db.Uuid
+  previous_status String?
+  new_status      String
+  notes           String?
+  changed_at      DateTime? @default(now()) @db.Timestamp(6)
+  soldiers        soldiers? @relation(fields: [soldier_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model soldiers {
+  id                       String                   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name                     String
+  phone                    String
+  email                    String                   @unique
+  address                  String
+  mothers_name             String?
+  dominant_hand            String
+  form_filler_name         String?
+  form_filler_phone        String?
+  form_filler_relationship String?
+  location_id              String?                  @db.Uuid
+  tefillin_id              String?                  @db.Uuid
+  last_contact_date        DateTime?                @db.Timestamptz(6)
+  next_contact_date        DateTime?                @db.Timestamptz(6)
+  created_at               DateTime                 @default(now()) @db.Timestamptz(6)
+  updated_at               DateTime                 @default(now()) @db.Timestamptz(6)
+  current_status           soldierstatus?
+  distributions_photos     distributions_photos[]
+  soldier_status_history   soldier_status_history[]
+  locations                locations?               @relation(fields: [location_id], references: [id], onUpdate: NoAction)
+  tefillin                 tefillin?                @relation(fields: [tefillin_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+model tefillin {
+  id                   String                 @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  barcode              String                 @db.VarChar(255)
+  status               tefillin_status
+  checkername          String?                @db.VarChar(255)
+  createdat            DateTime?              @default(now()) @db.Timestamp(6)
+  donorid              String?                @db.VarChar(255)
+  donorname            String?                @db.VarChar(255)
+  inmemoryof           String?                @db.VarChar(255)
+  locationId           String?                @db.Uuid
+  parchmentimageurls   Json?                  @db.Json
+  productiondate       DateTime?              @db.Date
+  scribename           String?                @db.VarChar(255)
+  updatedat            DateTime?              @default(now()) @db.Timestamp(6)
+  distributions_photos distributions_photos[]
+  soldiers             soldiers[]
+  locations            locations?             @relation(fields: [locationId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_location")
+  tefillin_photos      tefillin_photos[]
+  @@index([barcode], map: "idx_barcode")
+  @@index([status], map: "idx_status")
+}
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model users {
+  id                                     String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email                                  String       @unique @db.VarChar
+  name                                   String       @db.VarChar
+  phone                                  String?      @db.VarChar
+  role                                   user_role
+  status                                 user_status? @default(active)
+  profile_image_url                      String?
+  created_at                             DateTime?    @default(now()) @db.Timestamp(6)
+  google_id                              String?
+  last_login                             DateTime?    @db.Timestamp(6)
+  token                                  String?      @unique
+  google_refresh_token                   String?
+  location_id                            String?      @db.Uuid
+  locations                              locations[]
+  locations_users_location_idTolocations locations?   @relation("users_location_idTolocations", fields: [location_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  @@index([email], map: "idx_users_email")
+}
+model products {
+  id             String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name           String
+  price          Decimal          @db.Decimal(10, 2)
+  is_active      Boolean?         @default(true)
+  created_at     DateTime?        @default(now()) @db.Timestamptz(6)
+  donation_items donation_items[]
+}
+model donations {
+  id             String           @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  donor_name     String
+  phone          String?
+  email          String
+  dedication     String?
+  payment_status String?          @default("pending")
+  payment_id     String?
+  created_at     DateTime?        @default(now()) @db.Timestamptz(6)
+  donation_items donation_items[]
+}
+model donation_items {
+  id            String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  donation_id   String?    @db.Uuid
+  donation_type String
+  product_id    String?    @db.Uuid
+  quantity      Int?
+  amount        Decimal?   @db.Decimal(10, 2)
+  total_amount  Decimal    @db.Decimal(10, 2)
+  created_at    DateTime?  @default(now()) @db.Timestamptz(6)
+  donations     donations? @relation(fields: [donation_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  products      products?  @relation(fields: [product_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+model distributions_photos {
+  id             String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tefillin_id    String     @db.Uuid
+  soldier_id     String     @db.Uuid
+  location_id    String?    @db.Uuid
+  date           DateTime?  @default(now()) @db.Timestamp(6)
+  drive_url      String
+  description    String?
+  type           media_type
+  is_publishable Boolean    @default(false)
+  locations      locations? @relation(fields: [location_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_location")
+  soldiers       soldiers   @relation(fields: [soldier_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_soldier")
+  tefillin       tefillin   @relation(fields: [tefillin_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_tefillin")
+}
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model messages {
+  title      String
+  content    String
+  from_role  user_role
+  to_role    user_role
+  created_at DateTime  @default(now()) @db.Timestamp(6)
+  updated_at DateTime? @default(now()) @db.Timestamp(6)
+  id         String    @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  @@ignore
+}
+model tefillin_photos {
+  id              String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tefillin_id     String          @db.Uuid
+  file_id         String
+  note            String?
+  created_at      DateTime?       @default(now()) @db.Timestamp(6)
+  tefillin_status tefillin_status @default(with_scribe)
+  tefillin        tefillin        @relation(fields: [tefillin_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_tefillin")
+}
+enum tefillin_status {
+  with_scribe
+  with_checker
+  in_transit
+  at_center
+  at_location
+  assigned
+  distributed
+}
+enum user_role {
+  admin
+  location_rabbi
+  inventory_manager
+  soldier
+  viewer
+  manager
+}
+enum user_status {
+  active
+  inactive
+  pending
+}
+enum media_type {
+  photo
+  video
+}
+enum soldierstatus {
+  registered
+  rejected
+  approved
+  paid
+  scheduled
+  received
+}
